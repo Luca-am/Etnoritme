@@ -1,0 +1,63 @@
+<!-- Visualització del PDF amb botons d'acció -->
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<meta charset="UTF-8">
+	<title>La relación de Spotify con el capitalismo colonialismo de datos</title>
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<style>
+		.pdf-actions {
+			margin: 20px 0;
+			display: flex;
+			gap: 1em;
+		}
+		.pdf-actions button, .pdf-actions a {
+			padding: 0.5em 1.2em;
+			border: none;
+			background: #2a5d84;
+			color: #fff;
+			border-radius: 4px;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 1em;
+			transition: background 0.2s;
+		}
+		.pdf-actions button:hover, .pdf-actions a:hover {
+			background: #17405c;
+		}
+		.pdf-viewer {
+			width: 100%;
+			height: 80vh;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<h1>La relación de Spotify con el capitalismo colonialismo de datos</h1>
+	<div class="pdf-actions">
+		<button onclick="citarPDF()">Citar</button>
+		<button onclick="compartirPDF()">Compartir</button>
+		<a href="../../assets/pdfs/La relación de Spotify con el capitalismo_ colonialismo de datos.pdf" download>Descarregar</a>
+	</div>
+	<iframe class="pdf-viewer" src="../../assets/pdfs/La relación de Spotify con el capitalismo_ colonialismo de datos.pdf"></iframe>
+	<script>
+		function citarPDF() {
+			const cita = 'Autor/a. "La relación de Spotify con el capitalismo colonialismo de datos". Etnoritme, 2025.';
+			navigator.clipboard.writeText(cita);
+			alert('Cita copiada al porta-retalls!');
+		}
+		function compartirPDF() {
+			const url = window.location.href;
+			if (navigator.share) {
+				navigator.share({
+					title: document.title,
+					url: url
+				});
+			} else {
+				navigator.clipboard.writeText(url);
+				alert('Enllaç copiat al porta-retalls!');
+			}
+		}
+	</script>
+</body>
+</html>
