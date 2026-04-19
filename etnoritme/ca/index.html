@@ -5,213 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Etnoritme — Publicacions</title>
   <meta name="description" content="Etnoritme: investigar temes socials a través de la música, àlbums i videoclips." />
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    /* Estils bàsics, tot recte, minimalista, sense bootstrap */
-    :root {
-      --bg: #0b0b0b;
-      --text: #ffffff;
-      --accent: #ff4fa1;
-      --muted: #bbbbbb;
-      --max-width: 1100px;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: var(--max-width);
-    }
-
-    header {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    p.lead {
-      color: var(--muted);
-      margin: 0.2rem 0 0;
-      font-size: 0.9rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 0.2rem;
-    }
-
-    nav a.active,
-    nav a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
-    }
-
-    .posts {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-
-    article {
-      border: 1px solid #222;
-      border-radius: 0;
-      padding: 1rem;
-      background: #181818;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 0;
-    }
-
-    article img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: 0;
-      max-width: 220px;
-      margin-bottom: 0.7rem;
-    }
-
-    article h2 {
-      margin: 0.5rem 0 0.2rem 0;
-      font-size: 1.05rem;
-      text-align: center;
-      min-height: 2.5em;
-    }
-
-    article p {
-      margin: 0.2rem 0 0.3rem 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-      text-align: center;
-      min-height: 2.2em;
-      max-width: 95%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-
-    .meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.2rem;
-      text-align: center;
-    }
-
-    aside {
-      border-left: 2px solid #222;
-      padding-left: 1rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 2px solid #222;
-      padding-top: 1rem;
-    }
-
-    @media (max-width: 800px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      aside {
-        border-left: none;
-        border-top: 2px solid #222;
-        margin-top: 2rem;
-        padding-left: 0;
-        padding-top: 1rem;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Etnoritme</h1>
-      <p class="lead">Investigar temes socials a través de la música, els àlbums i els videoclips.</p>
-      <nav>
-        <a href="#" class="active">Totes</a>
-        <a href="#">Articles</a>
-        <a href="#">Ressenyes</a>
-        <a href="#">Bibliografia</a>
+  <div class="ambient-orb orb-a" aria-hidden="true"></div>
+  <div class="ambient-orb orb-b" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="site-root">
+    <header class="topbar fade-in">
+      <div class="brand-row">
+        <div class="brand">
+          <h1>Etnoritme</h1>
+          <p>Investigació cultural sobre com la música travessa conflictes, identitats i imaginaris polítics.</p>
+        </div>
+        <span class="badge">Revista viva · 2026</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegació principal">
+        <a href="#" class="nav-link active">Totes</a>
+        <a href="#" class="nav-link">Articles</a>
+        <a href="#" class="nav-link">Ressenyes</a>
+        <a href="#" class="nav-link">Bibliografia</a>
       </nav>
     </header>
 
-    <div class="grid">
-      <main class="posts">
-        <article>
-          <img src="../assets/images/imatge article 1.jpg" alt="portada àlbum" />
-          <h2><a href="artcles/La relación de Spotify con el capitalismo colonialismo de datos.html" style="color:inherit;text-decoration:none;" target="_blank" rel="noopener noreferrer">La relación de Spotify con el capitalismo: colonialismo de datos</a></h2>
-          <p>Colonialisme de dades i Spotify.</p>
-          <div class="meta">19/09/2025 — Música</div>
-        </article>
+    <section class="hero fade-in">
+      <div>
+        <h2>La música com a <span class="accent">lectura crítica</span> del món social.</h2>
+        <p>
+          A Etnoritme publiquem peces que connecten cançons, videoclips i àlbums amb qüestions
+          de poder, colonialitat de dades, protesta i memòria cultural. Llegeix, filtra i explora
+          els textos de manera més ràpida.
+        </p>
+      </div>
+      <div class="hero-stats" aria-label="Indicadors de contingut">
+        <div class="hero-stat">
+          <strong>19</strong>
+          <span>Articles oberts</span>
+        </div>
+        <div class="hero-stat">
+          <strong>8</strong>
+          <span>Temes socials</span>
+        </div>
+        <div class="hero-stat">
+          <strong>12</strong>
+          <span>Artistes analitzats</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4</strong>
+          <span>Línies de recerca</span>
+        </div>
+      </div>
+    </section>
 
-        <article>
-          <img src="https://picsum.photos/seed/2/220/220" alt="videoclip" />
-          <h2>Imatges i protesta: el videoclip</h2>
-          <p>El videoclip com a espai de discurs polític.</p>
-          <div class="meta">14/08/2025 — Videoclips</div>
-        </article>
+    <div class="content-shell">
+      <main class="feed-panel">
+        <div class="feed-top">
+          <h2 class="feed-title">Publicacions destacades</h2>
+          <p class="counter"><span id="visible-count">0</span> resultats visibles</p>
+        </div>
 
-        <article>
-          <img src="https://picsum.photos/seed/3/220/220" alt="article" />
-          <h2>Com la música modela debats</h2>
-          <p>Música i mobilització social recent.</p>
-          <div class="meta">02/07/2025 — Context social</div>
-        </article>
+        <div class="filters" role="tablist" aria-label="Filtre per categoria">
+          <button type="button" class="chip active" data-filter="all">Totes</button>
+          <button type="button" class="chip" data-filter="musica">Música</button>
+          <button type="button" class="chip" data-filter="videoclips">Videoclips</button>
+          <button type="button" class="chip" data-filter="context-social">Context social</button>
+          <button type="button" class="chip" data-filter="capitalisme">Capitalisme de dades</button>
+        </div>
+
+        <section class="post-grid" id="post-grid" aria-live="polite">
+          <article class="post-card fade-in" data-category="musica capitalisme" data-tags="spotify colonialisme dades plataformes algoritmes">
+            <div class="media">
+              <img src="../assets/images/imatge article 1.jpg" alt="Portada d'article sobre Spotify i colonialisme de dades" />
+            </div>
+            <div class="post-body">
+              <span class="post-category">Música · Capitalisme de dades</span>
+              <h3>La relación de Spotify con el capitalismo: colonialismo de datos</h3>
+              <p>Com les plataformes musicals converteixen l'escolta en extracció de valor i control cultural.</p>
+              <div class="post-meta">19/09/2025 · 7 min de lectura</div>
+              <a class="post-link" href="articles/La relación de Spotify con el capitalismo colonialismo de datos.html" target="_blank" rel="noopener noreferrer">Llegir article</a>
+            </div>
+          </article>
+
+          <article class="post-card fade-in" data-category="videoclips context-social" data-tags="protesta visualitat discurs politic imatge">
+            <div class="media">
+              <img src="https://picsum.photos/seed/etnoritme-video/780/540" alt="Composició visual sobre cultura digital i protesta" />
+            </div>
+            <div class="post-body">
+              <span class="post-category">Videoclips · Protesta</span>
+              <h3>Imatges i protesta: el videoclip com a espai de dissidència</h3>
+              <p>L'estètica audiovisual com a llenguatge polític en contextos de conflictivitat social.</p>
+              <div class="post-meta">14/08/2025 · 5 min de lectura</div>
+              <a class="post-link" href="#">Veure resum</a>
+            </div>
+          </article>
+
+          <article class="post-card fade-in" data-category="context-social musica" data-tags="identitat mobilitzacio joventut memòria barri">
+            <div class="media">
+              <img src="https://picsum.photos/seed/etnoritme-debat/780/540" alt="Detall d'espai urbà i cultura musical" />
+            </div>
+            <div class="post-body">
+              <span class="post-category">Context social · Música</span>
+              <h3>Com la música modela debats públics i identitats col·lectives</h3>
+              <p>Una lectura de la cançó urbana com a termòmetre de tensions socials contemporànies.</p>
+              <div class="post-meta">02/07/2025 · 6 min de lectura</div>
+              <a class="post-link" href="#">Explorar notes</a>
+            </div>
+          </article>
+
+          <article class="post-card fade-in" data-category="musica" data-tags="memoria popular arxiu oral tradicions remix">
+            <div class="media">
+              <img src="https://picsum.photos/seed/etnoritme-memory/780/540" alt="Textura sonora amb objectes analògics" />
+            </div>
+            <div class="post-body">
+              <span class="post-category">Música · Memòria</span>
+              <h3>Arxiu sonor i memòria popular: qui decideix què perdura?</h3>
+              <p>Entre l'arxiu institucional i les pràctiques comunitàries de preservació cultural.</p>
+              <div class="post-meta">24/06/2025 · 8 min de lectura</div>
+              <a class="post-link" href="#">Llegir reflexió</a>
+            </div>
+          </article>
+        </section>
+
+        <p class="empty-state" id="empty-state">No hi ha resultats amb aquests filtres. Prova una altra paraula o categoria.</p>
       </main>
 
-      <aside>
-        <h3>Cerca</h3>
-        <input type="text" placeholder="Busca..." style="width:100%;padding:0.5rem;background:#111;border:1px solid #333;color:var(--text);" />
+      <aside class="side-panel fade-in">
+        <div class="side-block">
+          <h3>Cerca ràpida</h3>
+          <input id="search-input" class="search-input" type="search" placeholder="Escriu paraules clau..." aria-label="Cerca publicacions" />
+        </div>
 
-        <h3 style="margin-top:1.5rem;">Etiquetes</h3>
-        <p style="color:var(--muted);font-size:0.9rem;">música, identitat, protesta, videoclips</p>
+        <div class="side-block">
+          <h3>Etiquetes</h3>
+          <div class="tag-cloud">
+            <button type="button" class="tag-btn" data-tag="protesta">protesta</button>
+            <button type="button" class="tag-btn" data-tag="identitat">identitat</button>
+            <button type="button" class="tag-btn" data-tag="spotify">spotify</button>
+            <button type="button" class="tag-btn" data-tag="algoritmes">algoritmes</button>
+            <button type="button" class="tag-btn" data-tag="memoria">memòria</button>
+          </div>
+        </div>
 
-        <h3 style="margin-top:1.5rem;">Sobre Etnoritme</h3>
-        <p style="color:var(--muted);font-size:0.9rem;">Etnoritme investiga temes socials a través de les cançons i del context social, cultural i polític que les envolta.</p>
+        <div class="side-block">
+          <h3>Sobre Etnoritme</h3>
+          <p>
+            Etnoritme investiga la música com a camp de disputa simbòlica: analitzem com les cançons
+            expliquen desigualtats, imaginaris col·lectius i canvis polítics.
+          </p>
+        </div>
       </aside>
     </div>
 
-    <footer>
-      © 2025 Etnoritme — Projecte d'investigació cultural.
+    <footer class="site-footer fade-in">
+      <strong>Etnoritme</strong> · revista d'anàlisi musical i crítica cultural · actualitzat: abril 2026
     </footer>
   </div>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
